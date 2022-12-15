@@ -95,6 +95,29 @@ class Boxer{
 public class Zadaca2 {
     public static void balanceBoxers(DLL<Boxer> lightWeight, DLL<Boxer> heavyWeight){
         //TODO: your code here
+        DLLNode<Boxer> current=heavyWeight.getFirst();
+        DLLNode<Boxer> najs=heavyWeight.getFirst();
+
+        while (current!=null){
+            if(current.element.calculateStrength()<=najs.element.calculateStrength()){
+                najs=current;
+            }
+            current=current.succ;
+        }
+        heavyWeight.delete(najs);
+        lightWeight.insertLast(najs.element);
+
+        DLLNode<Boxer>najv=lightWeight.getFirst();
+        current=lightWeight.getFirst();
+
+        while (current!=null){
+            if(current.element.calculateStrength()>=najv.element.calculateStrength()){
+                najv=current;
+            }
+            current=current.succ;
+        }
+        lightWeight.delete(najv);
+        heavyWeight.insertFirst(najv.element);
     }
 
     public static void main(String[] args) {

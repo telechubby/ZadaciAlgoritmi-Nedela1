@@ -61,7 +61,22 @@ public class Zadaca1 {
 
     static DLLNode<Obleka> findBestPricedItem(DLL<Obleka> obleki, String tip, String pol){
         //TODO: your code here
-        return null;
+        DLLNode<Obleka> najmal=obleki.getFirst();
+        while(najmal!=null){
+            if(najmal.element.type.equals(tip) && najmal.element.forSex.equals(pol))
+                break;
+            najmal=najmal.succ;
+        }
+        if(najmal==null){
+            return null;
+        }
+        DLLNode<Obleka> current=najmal.succ;
+        while (current!=null){
+            if(current.element.type.equals(tip) && current.element.forSex.equals(pol) && current.element.price<najmal.element.price)
+                najmal=current;
+            current=current.succ;
+        }
+        return najmal;
     }
 
     public static void main(String[] args) {

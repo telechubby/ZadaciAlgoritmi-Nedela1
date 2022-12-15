@@ -8,8 +8,6 @@ public class ZadacaVtorTermin {
             Element posleden=original.getLast().element;
             original.deleteLast();
             DLLNode<Element> current=original.getFirst();
-            //1 2 3 4
-            //5
             int cumulativeSum=0;
             while(current!=null && cumulativeSum+current.element.getId()<=posleden.getId()){
                 cumulativeSum+=current.element.getId();

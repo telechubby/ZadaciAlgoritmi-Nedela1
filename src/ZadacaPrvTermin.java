@@ -181,11 +181,6 @@ class SLL<E> {
 }
 
 public class ZadacaPrvTermin {
-    /*
-14
-3
-1 5 2 3 0 6 4 3 7 9 1 4 6 8
-     */
     private static void listTransform(SLL<Element> original) {
         //TODO: Your code
         SLL<Element>[] listi=new SLL[10];
@@ -210,13 +205,11 @@ public class ZadacaPrvTermin {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = Integer.parseInt(scanner.nextLine());
-        SLL<Element> list = new SLL<Element>();
-
+        SLL<Element> list = new SLL<>();
         for (int i = 0; i < num; i++) {
             int n = scanner.nextInt();
             list.insertLast(new Element(n));
         }
-
         listTransform(list);
     }
 }
