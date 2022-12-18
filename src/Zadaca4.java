@@ -48,9 +48,13 @@ public class Zadaca4 {
 
     public static void reverse_trip() {
         //TODO: your code here
+
     }
 
     public static void main(String[] args) {
+        cities.insertLast("Tokyo");
+        cities.insertLast("Barcelona");
+        cities.insertLast("Copenhagen");
         Scanner scanner=new Scanner(System.in);
         int n=-1;
         while(n<1 || n>4){
