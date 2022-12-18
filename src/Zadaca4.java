@@ -36,14 +36,17 @@ public class Zadaca4 {
     public static DLL<String> cities=new DLL<>();
     public static void insert_city(String name, int position){
         //TODO: your code here
+
     }
 
     public static void remove_city(int position){
         //TODO: your code here
+
     }
 
     public static void swap_cities(int position1, int position2){
         //TODO: your code here
+
     }
 
     public static void reverse_trip() {
@@ -57,34 +60,38 @@ public class Zadaca4 {
         cities.insertLast("Copenhagen");
         Scanner scanner=new Scanner(System.in);
         int n=-1;
-        while(n<1 || n>4){
+        while(n!=5){
             System.out.println("Please enter the desired operation: ");
             System.out.println("1.\tInsert city");
             System.out.println("2.\tRemove city");
             System.out.println("3.\tSwap cities");
             System.out.println("4.\tReverse order");
+            System.out.println("5.\tPrint the list and exit");
             n=Integer.parseInt(scanner.nextLine());
             switch (n) {
                 case 1 -> {
                     System.out.print("Please enter the city name: ");
                     String name = scanner.nextLine();
-                    System.out.print("Please enter the position of the city in the list: ");
+                    System.out.printf("Please enter the position of the city in the list (from 0 to %d): ",cities.length()-1);
                     int position = Integer.parseInt(scanner.nextLine());
                     insert_city(name, position);
                 }
                 case 2 -> {
-                    System.out.print("Please enter the position of the city in the list: ");
+                    System.out.printf("Please enter the position of the city in the list (from 0 to %d): ",cities.length()-1);
                     int position = Integer.parseInt(scanner.nextLine());
                     remove_city(position);
                 }
                 case 3 -> {
-                    System.out.print("Please enter the position of the first city in the list: ");
+                    System.out.printf("Please enter the position of the first city in the list (from 0 to %d): ",cities.length()-1);
                     int position1 = Integer.parseInt(scanner.nextLine());
-                    System.out.print("Please enter the position of the second city in the list: ");
+                    System.out.printf("Please enter the position of the second city in the list (from 0 to %d): ",cities.length()-1);
                     int position2 = Integer.parseInt(scanner.nextLine());
                     swap_cities(position1, position2);
                 }
                 case 4 -> reverse_trip();
+                case 5 -> {
+                    break;
+                }
                 case default -> System.out.println("Please enter a valid option 1-4");
             }
         }
