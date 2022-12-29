@@ -18,7 +18,7 @@
 import java.util.Scanner;
 
 class Zadaca2PDF {
-    public static int findLastElement(SLL<Integer> lista,Integer element)
+    public static int findFirstElement(SLL<Integer> lista,Integer element)
     {
         //TODO: your code here
     }
@@ -31,7 +31,7 @@ class Zadaca2PDF {
         for(String number:input)
             lista.insertLast(Integer.parseInt(number));
         n=Integer.parseInt(scanner.nextLine());
-        n=findLastElement(lista,n);
+        n=findFirstElement()Element(lista,n);
         System.out.printf("Result:\nList: %s\nElement position: %d\n",lista,n);
     }
 }
