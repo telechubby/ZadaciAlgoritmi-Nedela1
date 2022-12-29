@@ -33,7 +33,7 @@
 import java.util.Scanner;
 
 public class DeleteMiddle {
-    public static void deleteMiddle(SLL<Integer> lista)
+    public static void deleteMiddle(SLL<Integer> lista,int n)
     {
         //TODO: your code here
     }
@@ -44,7 +44,8 @@ public class DeleteMiddle {
         String[] input=scanner.nextLine().split(" ");
         for(String number:input)
             lista.insertLast(Integer.parseInt(number));
-        deleteMiddle(lista);
+        n=Integer.parseInt(scanner.nextLine());
+        deleteMiddle(lista,n);
         System.out.println("Result: "+lista);
     }
 }
