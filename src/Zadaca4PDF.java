@@ -1,6 +1,6 @@
 /*
     Дадена е еднострано поврзана листа. Да се напише функција која во листата ќе го пронајде
-    првиот јазол со информација x и ќе го префрли на крај на листата. Како резултат
+    последниот јазол со информација x и ќе го префрли на крај на листата. Како резултат
     функцијата да ја враќа позицијата (броено од почетокот на листата) на која бил
     пронајден бараниот јазол или -1 ако таков јазол не бил пронајден во листата.
     Влез:
@@ -12,13 +12,13 @@
     7
     Излез:
     List: 3->4->6->4->7->3->2->7
-    Element position=3
+    Element position=6
  */
 
 import java.util.Scanner;
 
-class Zadaca2PDF {
-    public static int findFirstElement(SLL<Integer> lista,Integer element)
+class Zadaca4PDF {
+    public static int findLastElement(SLL<Integer> lista,Integer element)
     {
         //TODO: your code here
     }
@@ -31,7 +31,7 @@ class Zadaca2PDF {
         for(String number:input)
             lista.insertLast(Integer.parseInt(number));
         n=Integer.parseInt(scanner.nextLine());
-        n=findFirstElement(lista,n);
+        n=findLastElement(lista,n);
         System.out.printf("Result:\nList: %s\nElement position: %d\n",lista,n);
     }
 }
