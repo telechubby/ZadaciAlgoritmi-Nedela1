@@ -17,7 +17,9 @@ import java.util.Scanner;
 public class TriJazli {
     public static DLL<Integer> spojListiPoTri(DLL<Integer> lista1, DLL<Integer> lista2)
     {
+        DLL<Integer> rezultat=new DLL<>();
         //TODO: your code here
+        return rezultat;
     }
 
     public static void main(String[] args) {
